@@ -1,0 +1,66 @@
+:root{
+    --black: #000000;
+    --white:#ffffff;
+    --likeblack:#1e1a13;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    font-size: 16px;
+    background-color: var(--black);
+}
+
+main{
+    margin: 0 auto;
+    width: 1280px;
+}
+header{
+    text-align: center;
+}
+h1{
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 50px;
+}
+h2{
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 40px;
+    text-align: center;
+}
+p{
+    color:var(--white);
+}
+#desc-section{
+    display: flex;
+    background-color: var(--likeblack);
+}
+#desc{
+    width:60%;
+    padding: 50px;
+}
+#image{
+    width:40%;
+}
+#image img{
+    width: 100%;;
+}
+#icons-section i{
+    display: inline;
+}
+#galeria{
+    display: flex;
+}
+#galeria img{
+     width: 30%;
+}
+#galeria img:nth-child(2){
+    margin: 0 5%;;
+}
+
+footer{
+    text-align: center;
+    background-color: var(--likeblack);
+    padding:30px 0px;
+    margin-top:50px;
+}
