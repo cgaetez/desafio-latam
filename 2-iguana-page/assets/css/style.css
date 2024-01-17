@@ -3,6 +3,7 @@
     --white:#ffffff;
     --likeblack:#1e1a13;
     font-family: 'Raleway', sans-serif;
+    font-weight: 300;
 }
 
 body{
@@ -21,19 +22,21 @@ h1{
     text-transform: uppercase;
     color: var(--white);
     font-size: 50px;
+    font-weight: 500;
 }
 h2{
     text-transform: uppercase;
     color: var(--white);
     font-size: 40px;
     text-align: center;
+    font-weight: 500;
 }
 p{
     color:var(--white);
+    font-size: 16px;
 }
 #desc-section{
     display: flex;
-    background-color: var(--likeblack);
 }
 #desc{
     width:60%;
@@ -45,8 +48,26 @@ p{
 #image img{
     width: 100%;;
 }
+#icons-section{
+    background-color: var(--likeblack);
+    padding: 40px 0px 0px 0px;
+}
 #icons-section i{
-    display: inline;
+    font-size: 60px;
+    color: var(--white);
+}
+#icons-section p{
+    font-size: 25px;
+}
+#icons-section ul{
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#icons-section li{
+    display: inline-block;
+    padding: 50px;
+    text-align: center;
 }
 #galeria{
     display: flex;
@@ -64,3 +85,7 @@ footer{
     padding:30px 0px;
     margin-top:50px;
 }
+footer a{
+    color:var(--white);
+    text-decoration: none;
+} 
