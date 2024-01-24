@@ -1,0 +1,59 @@
+:root{
+  --color1: #212529;
+  --color2: #707070;
+  --light: #F8F9FA;
+  --white: #fff;
+  --success: #28a745;
+  font-family: Roboto;
+  font-size: 16px;
+}
+
+
+
+.color1{
+  color: var(--color1);
+}
+
+.color2{
+  color: var(--color2);
+}
+
+.light{
+  color:var(--light);
+}
+
+.white{
+  color:var(--white);
+}
+.bg-white{
+  background-color: var(--white);
+}
+
+.success{
+  color:var(--success);
+}
+.bg-success{
+  background-color: var(--success);
+}
+
+
+.card-title{
+  font-size: 1.4rem;
+  color:var(--color1);
+}
+.card-body .card-text{
+  color:var(--color2);
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+.card-footer{
+  background-color: var(--white);
+}
+.card-footer .card-text{
+  color:var(--color2);
+  font-size: 1rem;
+}
+.card-footer .card-text .success{
+  font-size: 1.5rem;
+}

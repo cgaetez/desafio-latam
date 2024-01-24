@@ -1,0 +1,102 @@
+:root{
+    --color1: #373A3C;
+    --color2: #DDDDDD;
+    --color3: #373A3C;
+    --color4: #DC3545;
+
+    font-family: 'Cabin, sans-serif';
+    font-size: 16px;
+  }
+
+header{
+    background-color: var(--color1);
+}
+
+h1{
+    font-family: 'Lobster', sans-serif;
+}
+
+#principal .card-title{
+    font-weight: bold;
+    font-size: 3rem;
+}
+#principal .card-text{
+    color: var(--color3);
+    font-size: 1.5rem;
+}
+
+.carousel-indicators [data-bs-target]{
+    background-color: var(--color2);
+    opacity: 1;
+    height: 20px;
+    width: 20px;
+}
+
+.carousel-indicators .active {
+    background-color: var(--color3);
+    opacity: 1;
+}
+
+#preparacion h3{
+    color:var(--color1);
+    font-size: 1.5rem;
+}
+#preparacion p, #preparacion li{
+    font-size: 1.2rem;
+}
+
+#recetas-relacionadas h3{
+    font-size: 3rem;
+    color: var(--color3);
+}
+#recetas-relacionadas .card-title{
+    color:  var(--color3);
+    font-size: 1.2rem;
+}
+
+#newsletter{
+    background-color: var(--color4);
+}
+#newsletter h3{
+    font-size: 2rem;
+}
+#newsletter p span{
+    font-family: 'Lobster', sans-serif; 
+}
+
+footer{
+background-color: var(--color3);
+font-family: 'Lobster', sans-serif;
+font-size: 2.5rem;
+}
+
+#recetas-relacionadas .card-title{
+    cursor:pointer;
+}
+
+#principal .card-title, #principal .card-text{
+    text-align: center;
+}
+
+@media (min-width: 576px) { 
+
+ }
+
+@media (min-width: 768px) { 
+    #principal .card-title, #principal .card-text{
+        text-align: left;
+    }
+ }
+
+@media (min-width: 992px) { 
+    
+ }
+
+@media (min-width: 1200px) { 
+
+ }
+
+@media (min-width: 1400px) {
+
+ }
+
