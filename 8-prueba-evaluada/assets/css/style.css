@@ -1,7 +1,7 @@
 :root{
     font-family: 'Open Sans', sans-serif;
     --colorprimary: rgba(65,202,240,1);
-
+}
 body{
     background-color: black;
 }
@@ -9,6 +9,7 @@ body{
 p{
     font-family: 'Open Sans', sans-serif;
 }
+
 h2{
     font-family: 'Roboto', sans-serif;
 }
@@ -17,6 +18,18 @@ i{
     background-color: var(--colorprimary);
 }
 
-.card-body, .btn-primary{
+.card-body, .btn-primary, footer{
     background-color: var(--colorprimary);
+}
+
+ul{
+    list-style: none;
+}
+
+.navbar-scroll{
+    transition:500ms ease;
+    background:transparent;
+}
+.navbar-scroll.scrolled{
+    background:black;
 }
