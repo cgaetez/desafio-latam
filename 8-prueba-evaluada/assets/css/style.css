@@ -33,3 +33,7 @@ ul{
 .navbar-scroll.scrolled{
     background:black;
 }
+
+.navbar-toggler{
+    background-color: var(--colorprimary);
+}
