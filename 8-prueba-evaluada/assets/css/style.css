@@ -6,11 +6,17 @@ body{
     background-color: black;
 }
 
-
+p{
+    font-family: 'Open Sans', sans-serif;
+}
 h2{
     font-family: 'Roboto', sans-serif;
 }
 
 i{
+    background-color: var(--colorprimary);
+}
+
+.card-body, .btn-primary{
     background-color: var(--colorprimary);
 }
