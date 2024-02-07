@@ -15,6 +15,8 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
     <!-- Reference CSS-->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -27,32 +29,41 @@
     </header>
     <main>
       <div class="container my-5">
-        <div class="row py-3">
+        <div class="row py-3" id="inicio">
           <div class="col d-flex gap-2">
-            <label for="cantidad"><strong>¿Cuántas veces quieres jugar? </strong></label><input type="text" name="cantidad" id="cantidad" /> 
-            <button  onclick="juegosElegidos()" class="btn btn-primary">Enviar Cantidad</button>
+            <label for="cantidad"><strong>¿Cuántas veces quieres jugar? </strong></label><input type="number" min="1" name="cantidad" id="cantidad" value="1"/> 
+            <button  onclick="iniciar();" class="btn btn-primary">Enviar Cantidad</button>
           </div>
         </div>
-        <div class="row">
-          <label for="juego">Elige tu jugada
-            <select name="juego" id="" class="col-6">
-              <option value="pieda"><i class="fa-solid fa-hand-back-fist"></i></option>
-              <option value="papel"><i class="fa-solid fa-hand-scissors"></i></option>
-              <option value="tijera"><i class="fa-solid fa-scissors"></i></option>
-            </select>
-          </label>
+        <div class="row d-none" id="opcion">
+          <h3 class>Elije una opción</h3>
+          <h4 id="juegoactual"></h3>
+          <div class="col d-flex gap-2">
+            
+            <button id="piedra" class="btn btn-secondary" onclick="jugadaUsuario('piedra');">Piedra <i class="fa-solid fa-hand-back-fist"></i></button>
+  
+            <button  id="papel" class="btn btn-secondary" onclick="jugadaUsuario('papel');">Papel <i class="fa-solid fa-hand-scissors"></i></button>
+  
+            <button id="tijera"  class="btn btn-secondary" onclick="jugadaUsuario('tijera');">Tijera <i class="fa-solid fa-scissors"></i></button>
+         
+            <input type="hidden" id="eleccion" value="" />
+          </div>
+
         </div>
         
-          <table class="table px-0">
+          <table class="table px-0 d-none" id="tabla-resultados">
             <thead>
               <tr>
-                <th class="px-0">Juegos</th>
+                <th class="px-0">Usuario</th>
+                <th class="px-0">Máquina</th>
+                <th class="px-0">Resultado</th>
               </tr>
             </thead>
             <tbody id="resultados">
               
             </tbody>
           </table>
+          <button class="btn btn-warning mt-5 d-none" onclick="resetear();" id="reset">Jugar de nuevo</button>
         </div>        
       </div>
     </main>
