@@ -124,7 +124,6 @@ function jugar(eleccion){
            crearhtml(eleccion, maquina, estado);
 
         juegoactual.innerHTML = `Máquina:${maquina} | Resultado: ${estado}`;
-        console.log('End' + jugada);
 
         if(jugada != 0){
             return;
