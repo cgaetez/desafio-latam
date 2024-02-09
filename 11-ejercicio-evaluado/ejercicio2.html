@@ -36,6 +36,24 @@
 </div>
     <script>
     // Escríbe aquí tu código
+
+
+    let setButtons = (items) => {
+        let btn = [];
+        for (let i = 1; i <= items; i++) {
+            btn[i] = document.getElementById(`btn-${i}`);
+            console.log(btn[i].id);
+            btn[i].addEventListener("click", function() {
+                color = btn[i].style.backgroundColor;
+                console.log(color);
+                caja.style.backgroundColor = color;
+            });
+        }
+    }
+
+    setButtons(6);
+
+
     </script>
 </body>
 

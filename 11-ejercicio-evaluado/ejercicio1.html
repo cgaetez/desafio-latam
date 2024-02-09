@@ -47,56 +47,62 @@
         </div>
     </div>
     <script>
-    // Escríbe aquí tu código
-    let resultado = -1;
-    let test = (event) =>{
-        
-        console.log(`Form Submitted! Timestamp: ${event.timeStamp}`);
-        validacionGeneral('nombre','errorNombre');
-        validacionGeneral('asunto','errorAsunto');
-        validacionGeneral('mensaje','errorMensaje');
-        console.log('res.'+resultado);
+    // Escríbe aquí tu código    
+    let detect = (event) =>{
+        resultado = false;
+        let ok = document.querySelector('.resultado');
 
-        if(resultado === 0){
-            let ok = document.querySelector('.resultado');
+        console.log(`Form Submitted! Timestamp: ${event.timeStamp}`);
+        let v1 = validacionGeneral('nombre','errorNombre');
+        let v2 = validacionGeneral('asunto','errorAsunto');
+        let v3 = validacionGeneral('mensaje','errorMensaje');
+
+        if(v1 && v2  &&  v3){
             ok.innerHTML = `<p>Mensaje enviado correctamente</p>`;
+        }else{
+            ok.innerHTML = ``;
         }
+         
+        console.log('------');
         event.preventDefault();  
     }
 
     let evaluaPatron = (campo,errorCampo) => {
-        let resp = -1;
-        const patron = /[^a-zA-Z]/gim;
+        let resp = 0;
+        const patron = /^[a-zA-Z]+$/;
         let error = document.querySelector(`.${errorCampo}`);
-        let evalua = document.getElementById(`${campo}`).value;
-        console.log(evalua.match(patron));
-        if(evalua.match(patron) === null){
+        error.innerHTML = ``;
+        let evalua = document.getElementById(`${campo}`).value.replace(/\s/g, "");
+        //console.log('test:' + evalua  + patron.test(evalua));
+        
+        if(patron.test(evalua)){
             error.innerHTML = ``;
-            resp =  0;
+            return true;
         }else{
             error.innerHTML = `No cumple con patrón`;
+            return false;
         }
-        return resp;
     }
 
     let validacionGeneral = (campo,errorCampo) =>{
+        console.log('res-start ' + resultado);
         let error = document.querySelector(`.${errorCampo}`);
         if(!document.getElementById(`${campo}`).value){
             error.innerHTML = `El ${campo} es requerido`;
             console.log(`El ${campo} es requerido`);
-            resultado = -1;
         }else{
-            resultado = evaluaPatron(campo,errorCampo);
-        }
-        console.log('resin'+resultado);
-        
+             
+            return evaluaPatron(campo,errorCampo);
+            
+        }  
+        console.log('res-end ' + resultado);      
     }
      
     
 
      
     const form = document.getElementById("formulario");
-    form.addEventListener("submit", test);
+    form.addEventListener("submit", detect);
 
     </script>
 </body>

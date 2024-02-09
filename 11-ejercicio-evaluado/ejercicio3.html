@@ -35,7 +35,57 @@
         </div>
     </div>
     <script>
+    let res=0;
+    let error=0;
+    let respuesta = document.querySelector('.resultado');
+    
     // Escríbe aquí tu código
+    let suma = (a,b) =>{
+        res = parseInt(a) + parseInt(b);
+        return res;
+    }
+    let resta = (a,b) =>{
+        res = parseInt(a) - parseInt(b);
+        if(res<0){res=0;}
+        return res;
+    }
+
+
+    let evaluaPatron = (numero) => {
+        const patron = /[^0-9]/gim;
+  
+        console.log(numero.match(patron));
+        if(numero.match(patron) === null){
+            error =  0;
+        }else{
+            error = 1;
+        }
+        respuesta.innerHTML = 'Ingresa números';
+    }
+
+    btnSuma = document.getElementById('btn-sumar');
+    btnSuma.addEventListener("click", function() {
+        evaluaPatron(document.getElementById('valor1').value);
+        evaluaPatron(document.getElementById('valor2').value);
+        console.log(error);
+        if(error == 0){
+            respuesta.innerHTML =  suma(document.getElementById('valor1').value , document.getElementById('valor2').value);
+        }
+    });
+
+    btnResta = document.getElementById('btn-restar');
+    btnResta.addEventListener("click", function() {
+        evaluaPatron(document.getElementById('valor1').value);
+        evaluaPatron(document.getElementById('valor2').value);
+        console.log(error);
+        if(error == 0){
+            respuesta.innerHTML =  resta(document.getElementById('valor1').value , document.getElementById('valor2').value);
+        }
+    });
+
+     
+
+
     </script>
 </body>
 
